@@ -5,7 +5,12 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 const App = () => {
-    return <h1>こんにちは</h1>
+    return (
+        <>
+            <h1>こんにちは</h1>
+            <p>お元気ですか</p>
+        </>
+    )
 }
 
 root.render(

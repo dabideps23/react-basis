@@ -1,9 +1,12 @@
 import { useState } from "react";
+
 import { ColorfulMessage } from "./components/ColorfulMessage"
 
 export const App = () => {
+    console.log("------APP------");
     //フックの宣言
     const [num, setNum] = useState(0);
+    const [isShowFace, setIsShowFase] = useState(true);
 
     const onClickCountUp = () => {
         //ここでフックの宣言をするとエラー
@@ -15,6 +18,10 @@ export const App = () => {
         // setNum((prev) => prev + 1);
     }
 
+    const onClickToggle = () => {
+        setIsShowFase(!isShowFace);
+    }
+
     return (
         <>
             <h1>こんにちは</h1>
@@ -22,6 +29,8 @@ export const App = () => {
             <ColorfulMessage color="green" children="元気です！" />
             <button onClick={onClickCountUp}>ボタン</button>
             <p>{num}</p>
+            <button onClick={onClickToggle}>on/off</button>
+            {isShowFace && <p>(*^^*)</p>}
         </>
     )
 }

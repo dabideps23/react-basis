@@ -6,6 +6,7 @@ export const App = () => {
 
     const onClickCountUp = () => {
         setNum(num + 1);
+        setNum(num + 1); // 8行目の更新前に評価されるため、相対的に＋１しかしされない。
     }
 
     return (

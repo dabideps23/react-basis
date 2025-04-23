@@ -8,6 +8,11 @@ export const App = () => {
     const [num, setNum] = useState(0);
     const [isShowFace, setIsShowFase] = useState(true);
 
+    //主な再レンダリングのトリガー
+    // 1.フックの値が更新されたら
+    // 2.プロップスの値が変わったら
+    // 3.親コンポーネントが再レンダリングされたら
+
     const onClickCountUp = () => {
         //ここでフックの宣言をするとエラー
         // const [num, setNum] = useState(0);

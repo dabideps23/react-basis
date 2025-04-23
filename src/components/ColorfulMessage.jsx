@@ -1,5 +1,5 @@
-export const ColorfulMessage = ({color, children} = props) => {
-
+// export const ColorfulMessage = ({color, children} = props) => {
+const ColorfulMessage = ({color, children} = props) => {
     console.log("------ColorfulMessage------");
     const contentStyle = {
         color,
@@ -10,3 +10,7 @@ export const ColorfulMessage = ({color, children} = props) => {
         <p style={contentStyle}>{children}</p>
     )
 }
+
+export default ColorfulMessage;
+//1ファイルで一回だけ
+//取得先で名前を指定できる。
